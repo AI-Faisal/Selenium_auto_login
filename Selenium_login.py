@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # Configure the ChromeDriver path
-profile_path = 'C:/Users/Faisal El-Muhammady/AppData/Roaming/Mozilla/Firefox/Profiles/gmmsn0a8.faisal_automation'  # Firefox profile path
+profile_path = 'C:/Users/path'  # Firefox profile path
 options = webdriver.FirefoxOptions()
 options.profile = webdriver.FirefoxProfile(profile_path)
 
@@ -17,15 +17,15 @@ options.add_argument('--headless')
 driver = webdriver.Firefox(options=options)
 
 # Open the target website
-driver.get('https://cas.iium.edu.my:8448/cas/login?service=https%3a%2f%2fimaluum.iium.edu.my%2fhome')
+driver.get('https://abcdef.com/login') # Login web
 
 # Find the username field and enter the username
 username_field = driver.find_element(By.NAME, 'username')
-username_field.send_keys('G2112217')
+username_field.send_keys('') # @username
 
 # Find the password field and enter the password
 password_field = driver.find_element(By.NAME, 'password')
-password_field.send_keys('Cha961224')
+password_field.send_keys('') # pw
 
 # Find the login button and click it
 login_button = driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/form/section[4]/input[4]')
